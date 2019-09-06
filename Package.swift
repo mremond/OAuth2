@@ -38,7 +38,7 @@ let package = Package(
 		.target(name: "Base", dependencies: [.target(name: "SwiftKeychain")]),
 		.target(name: "macOS", dependencies: [.target(name: "Base")]),
 		.target(name: "Flows", dependencies: [.target(name: "macOS")]),
-		.target(name: "DataLoader", dependencies: [.target(name: "Flows")]),
+		.target(name: "DataLoader", dependencies: [.target(name: "Flows"), .target(name:  "iOS")]),
 		.testTarget(name: "BaseTests", dependencies: [.target(name: "Base"), .target(name: "Flows")]),
 		.testTarget(name: "FlowTests", dependencies: [.target(name: "Flows")]),
 //		.testTarget(name: "DataLoaderTests", dependencies: [.target(name: "DataLoader")]),
